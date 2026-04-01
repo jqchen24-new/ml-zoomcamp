@@ -72,7 +72,7 @@ def train_model(df):
 def save_model(pipeline, output_file):
     with open(output_file, 'wb') as f_out:
         pickle.dump(pipeline, f_out)
-    print(f'model saved to {output_file}')
+
 
 df = load_data()
 
@@ -84,5 +84,6 @@ df.loc[df.index[:1500], 'churn'] = 1
 y_train = df.churn
 pipeline = train_model(df)
 
-save_model(pipeline, 'model.bin')
+save_model(pipeline, './model.bin')
 
+print(f'model saved to model.bin')

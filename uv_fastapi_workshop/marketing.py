@@ -1,6 +1,6 @@
 import requests
 
-url = 'http://localhost:9696/predict'
+url = 'http://localhost:9696/predict' # replace this with your actual URL if different (including your production deployment URL)
 
 customer = {
   "gender": "female",
